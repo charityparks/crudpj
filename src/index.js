@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import * as firebase from 'firebase';
+// import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDv9RJv9e3wyI3yFMLjZWCTD4pYc4VKiLE",
@@ -13,7 +14,8 @@ var firebaseConfig = {
   messagingSenderId: "507750211121",
   appId: "1:507750211121:web:48e4d591f1fd389d023f10"
 };
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
+firebase.initializeApp();
 
 ReactDOM.render(
   <React.StrictMode>
