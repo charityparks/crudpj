@@ -14,5 +14,14 @@ class User extends Component {
            console.log(snapshot.val())
        });
    }
+   render(){
+       return (
+           <div>
+
+           </div>
+       );
+   }
 }
+
+export default User;
 
