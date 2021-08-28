@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
+import { Table } from 'react-bootstrap';
 
 class User extends Component {
    constructor(props) {
@@ -34,6 +35,9 @@ class User extends Component {
                     <th>Delete</th>
                   </tr>
                 </thead>
+                    <tbody>
+                        {listUsers}
+                    </tbody>
             </Table>
         </div>
        );
