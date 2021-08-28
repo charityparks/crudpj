@@ -11,8 +11,16 @@ class User extends Component {
    componentDidMount(){
        firebase.database().ref('/')
        .on('value',snapshot => {
-           console.log(snapshot.val())
-       });
+           let returnArr = [];
+           snapshot.forEach(data => {
+               var user =data.val();
+               user['key'] = data.key;
+               returnArr.push(user);
+           });
+           this.setState({
+               users: returnArr
+           })
+        });
    }
    render(){
        return (
