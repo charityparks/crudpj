@@ -23,10 +23,19 @@ class User extends Component {
         });
    }
    render(){
-       return (
-           <div>
-
-           </div>
+      return (
+        <div>
+            <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+            </Table>
+        </div>
        );
    }
 }
