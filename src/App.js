@@ -27,3 +27,9 @@ class App extends Component {
 }
 
 export default App;
+
+class NotFound extends Component {
+  render() {
+    return <div>Not Found</div>
+  }
+}
