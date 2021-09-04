@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import User from './User';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import * as firebase from 'firebase';
 
 class App extends Component {
@@ -9,7 +11,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1></h1>
+        <BrowserRouter>
+          <div>
+            <Switch>
+              
+            </Switch>
+          </div>
+          
+        </BrowserRouter>
+        
       </div>
     );
   }
