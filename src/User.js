@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 
 class User extends Component {
    constructor(props) {
@@ -8,6 +8,7 @@ class User extends Component {
        this.state = {
            users: []
        };
+       this.add = this.add.bind(this);
    } 
    componentDidMount(){
        firebase.database().ref('/')
@@ -23,9 +24,13 @@ class User extends Component {
            })
         });
    }
+   add(e) {
+    this.props.history.push("/add");
+}
    render(){
       return (
         <div>
+            <Button variant="primary" onClick={this.add}>Add</Button>
             <Table striped bordered hover>
                 <thead>
                   <tr>
@@ -42,6 +47,7 @@ class User extends Component {
         </div>
        );
    }
+   
 }
 
 export default User;
