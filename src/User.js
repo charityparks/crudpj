@@ -6,7 +6,9 @@ class User extends Component {
    constructor(props) {
        super(props);
        this.state = {
-           users: []
+           users: [],
+           showDeleteDialog: false,
+           selectedUser: {}
        };
        this.add = this.add.bind(this);
    } 
