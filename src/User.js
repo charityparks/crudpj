@@ -30,6 +30,19 @@ class User extends Component {
     this.props.history.push("/add");
 }
    render(){
+    const listUsers = this.state.users.map((user) =>   
+    <tr key={user.key}>
+      <td>{user.username}</td>
+      <td>{user.email}</td>
+      <td>
+          <Link to={`/edit/${user.key}`}>            
+              Edit
+          </Link>        
+      </td>               
+      <td><Button onClick={ this.openDeleteDialog.bind(this,user)}>Remove</Button></td>          
+    </tr>                    
+    );    
+    
       return (
         <div>
             <Button variant="primary" onClick={this.add}>Add</Button>
