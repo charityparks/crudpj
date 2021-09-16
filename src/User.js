@@ -34,15 +34,14 @@ class User extends Component {
     <tr key={user.key}>
       <td>{user.username}</td>
       <td>{user.email}</td>
-      <td>
+      <td>Edit</td>
           <Link to={`/edit/${user.key}`}>            
-              Edit
-          </Link>        
-      </td>               
+          </Link>       
+                     
       <td><Button onClick={ this.openDeleteDialog.bind(this,user)}>Remove</Button></td>          
     </tr>                    
     );    
-    
+
       return (
         <div>
             <Button variant="primary" onClick={this.add}>Add</Button>
