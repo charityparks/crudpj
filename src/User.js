@@ -12,7 +12,8 @@ class User extends Component {
        };
        this.add = this.add.bind(this);
        this.closeDeleteDialog = this.closeDeleteDialog.bind(this);
-       
+       this.delete = this.delete.bind(this);
+
    } 
    componentDidMount(){
        firebase.database().ref('/')
