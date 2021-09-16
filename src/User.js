@@ -29,6 +29,13 @@ class User extends Component {
    add(e) {
     this.props.history.push("/add");
 }
+
+    openDeleteDialog(User){
+        this.setState({
+            showDeleteDialog: true,
+            selectedUser: user
+        });
+    }
    render(){
     const listUsers = this.state.users.map((user) =>   
     <tr key={user.key}>
