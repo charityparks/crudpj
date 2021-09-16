@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
-import { Table, Button } from 'react-bootstrap';
+import { Table, Button, Modal } from 'react-bootstrap';
 
 class User extends Component {
    constructor(props) {
@@ -65,6 +65,20 @@ class User extends Component {
                         {listUsers}
                     </tbody>
             </Table>
+            <Modal show={this.state.showDeleteDialog} onHide={this.closeDeleteDialog}>
+          <Modal.Header closeButton>
+            <Modal.Title>Delete User</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>            
+<p>Are you sure you want to delete 
+{this.state.selectedUser.username}?</p>
+            <hr />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.delete}>Delete</Button>
+            <Button onClick={this.closeDeleteDialog}>Close</Button>
+          </Modal.Footer>
+        </Modal>     
         </div>
        );
    }
