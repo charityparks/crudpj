@@ -65,7 +65,11 @@ class User extends Component {
     <tr key={user.key}>
       <td>{user.username}</td>
       <td>{user.email}</td>
-      <td>Edit</td>
+      <td>
+        <Link to={`/edit/${user.key}`}>
+          Edit
+        </Link>
+      </td>
           <Link to={`/edit/${user.key}`}>            
           </Link>       
                      
