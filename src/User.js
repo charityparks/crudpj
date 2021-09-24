@@ -39,6 +39,14 @@ class User extends Component {
             selectedUser: user
         });
     }
+
+    closeDeleteDialog() {
+      this.setState({ 
+          showDeleteDialog: false,
+          selectedUser: {}
+      });
+    }
+
    render(){
     const listUsers = this.state.users.map((user) =>   
     <tr key={user.key}>
