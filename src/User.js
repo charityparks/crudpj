@@ -33,7 +33,7 @@ class User extends Component {
     this.props.history.push("/add");
 }
 
-    openDeleteDialog(User){
+    openDeleteDialog(user){
         this.setState({
             showDeleteDialog: true,
             selectedUser: user
