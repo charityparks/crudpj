@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
 import { Table, Button, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class User extends Component {
    constructor(props) {
