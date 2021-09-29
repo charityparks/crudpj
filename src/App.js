@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from './User';
 import UserForm from './UserForm';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import * as firebase from 'firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   constructor (){
