@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import * as firebase from 'firebase';
+import * as firebase from 'firebase';
 import firebase from 'firebase/app';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDv9RJv9e3wyI3yFMLjZWCTD4pYc4VKiLE",
